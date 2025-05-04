@@ -1,0 +1,69 @@
+
+body {
+  margin: 0;
+  background: #ffeef2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.container {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  perspective: 1000px;
+}
+
+.envelope {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1.2s;
+  cursor: pointer;
+}
+
+.envelope:hover {
+  transform: rotateX(180deg);
+}
+
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #e74c3c;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  backface-visibility: hidden;
+}
+
+.back {
+  transform: rotateX(180deg);
+  background: #fff;
+}
+
+.letter {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  right: 10px;
+  padding: 20px;
+  background: white;
+  border-radius: 5px;
+  transform: rotateX(180deg);
+  backface-visibility: hidden;
+  text-align: center;
+  font-size: 15px;
+  color: #333;
+}
+
+.letter p {
+  margin: 0 0 10px;
+}
+
+.flowers {
+  width: 40px;
+  margin-top: 10px;
+}
